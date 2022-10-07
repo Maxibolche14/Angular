@@ -1,0 +1,29 @@
+<h1>ALUMNOS</h1>
+
+<p>Hoy es {{fecha | date: 'dd/MM/yy hh:mm'}}</p>
+
+
+<h3>Lista de Alumnos</h3>
+<ul>
+    <li *ngFor="let persona of listaNombres">
+        {{persona.nombre}} - {{persona.edad}}
+    </li>
+</ul>
+
+<h3>Alumnos mayores de edad</h3>
+<ul>
+    <div *ngFor="let persona of listaNombres">
+        <li *ngIf="persona.edad > 18">
+            {{persona.nombre}} - {{persona.edad}}
+        </li>
+    </div>
+</ul>
+
+<h3>Alumnos menores de edad</h3>
+<ul>
+    <div *ngFor="let persona of listaNombres">
+        <li *ngIf="persona.edad < 18">
+            {{persona.nombre}} - {{persona.edad}}
+        </li>
+    </div>
+</ul>
