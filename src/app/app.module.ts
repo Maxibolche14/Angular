@@ -7,6 +7,8 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { NabvarComponent } from './components/nabvar/nabvar.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { AlumnosComponent } from './components/alumnos/alumnos.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormAlumnosComponent } from './components/form-alumnos/form-alumnos.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { AlumnosComponent } from './components/alumnos/alumnos.component';
     ProductosComponent,
     NabvarComponent,
     ToolbarComponent,
-    AlumnosComponent
+    AlumnosComponent,
+    FormAlumnosComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

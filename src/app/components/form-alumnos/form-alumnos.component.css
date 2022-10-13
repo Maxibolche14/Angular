@@ -1,0 +1,13 @@
+.Formulario{
+    margin-top: 2%;
+    height: 82%;
+    width: 80%;
+    padding: 2%;
+    border: 2px solid rgb(18, 21, 182);
+    align-items: center;
+}
+
+h1{
+    padding: 3%;
+    color: red;
+}

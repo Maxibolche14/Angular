@@ -7,17 +7,20 @@ import { Persona } from '../models/persona';
   styleUrls: ['./alumnos.component.css']
 })
 export class AlumnosComponent implements OnInit {
-
-  listaNombres : Array<Persona> = [
-    {nombre:'Maxi',edad: 32},
-    {nombre:'Vane',edad: 25},
-    {nombre:'Maria Paz',edad: 0.4},
-    {nombre:'Luciano',edad: 19},
-    {nombre:'Gaston',edad: 28},
-    {nombre:'Juan Pablo',edad: 4},
+  
+  listaNombres: Array<Persona> = [
+    
+    { nombre: 'Maxi', apellidos: 'Piñero', edad: 32, telefone: '091072566', direccion: 'Chana', ciudad: 'Montevideo', barrio: 'Cordon', nroPuerta: 2236 },
+    { nombre: 'Vane', apellidos: 'Tavolara', edad: 25, telefone: '091072566', direccion: 'Chana', ciudad: 'Montevideo', barrio: 'Cordon', nroPuerta: 2236 },
+    { nombre: 'Maria Paz', apellidos: 'Piñero', edad: 0.4, telefone: '091072566', direccion: 'Chana', ciudad: 'Montevideo', barrio: 'Cordon', nroPuerta: 2236 },
+    { nombre: 'Luciano', apellidos: 'Piñero', edad: 19, telefone: '091072566', direccion: 'Bv Artigas', ciudad: 'Florida', barrio: '25 de Mayo', nroPuerta: 851 },
+    { nombre: 'Gaston', apellidos: 'Piñero', edad: 28, telefone: '091072566', direccion: 'Bv Artigas', ciudad: 'Florida', barrio: '25 de Mayo', nroPuerta: 851 },
+    { nombre: 'Juan Pablo', apellidos: 'Pñero', edad: 4, telefone: '091072566', direccion: 'Bv Artigas', ciudad: 'Florida', barrio: '25 de Mayo', nroPuerta: 851 },
+    
   ];
+  
 
-fecha: Date = new Date();
+  fecha: Date = new Date();
 
   constructor() { }
 

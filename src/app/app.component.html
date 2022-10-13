@@ -1,6 +1,19 @@
 <div class="grid-container">
-<app-nabvar class="grid-menu"></app-nabvar>
- <app-alumnos class="grid-alumnos"></app-alumnos>
- <app-toolbar class="grid-header"></app-toolbar>
- <app-productos class="grid-productos"></app-productos>
+    <app-nabvar class="grid-menu"></app-nabvar>
+    <div class="row clearfix">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+            <div class="card">
+                <div class="body">
+                    <app-alumnos class="grid-alumnos"></app-alumnos>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-8 col-lg-2,2">
+            <div class="col-md-12 col-sm-12">
+                <app-form-alumnos class="grid-form-alumnos"></app-form-alumnos>
+            </div>
+        </div>
+    </div>
+    <app-toolbar class="grid-header"></app-toolbar>
+    <app-productos class="grid-productos"></app-productos>
 </div>

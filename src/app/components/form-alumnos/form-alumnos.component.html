@@ -1,0 +1,56 @@
+<div class="Formulario">
+    <div>
+        <h1>Formulario Alumnos</h1>
+    </div>
+<form [formGroup] = "formularioUsuario" (ngSubmit)="agregarUsuario()" class="row g-3">
+    <div class="col-md-6">
+      <label for="inputNombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="inputNombre" formControlName = "nombre">
+    </div>
+    <div class="col-md-6">
+      <label for="inputApellido" class="form-label">Apellido</label>
+      <input type="text" class="form-control" id="inputApellido" formControlName = "apellidos">
+    </div>
+    <div class="col-md-6">
+        <label for="inputEdad" class="form-label">Edad</label>
+        <input type="text" class="form-control" id="inputEdad" formControlName = "edad">
+      </div>
+      <div class="col-md-6">
+        <label for="inputTelefono" class="form-label">Telefono</label>
+        <input type="text" class="form-control" id="inputTelefono" formControlName = "telefone">
+      </div>
+    <div class="col-12">
+      <label for="inputDireccion" class="form-label">Direccion</label>
+      <input type="text" class="form-control" id="inputDireccion" placeholder="18 de Julio..." formControlName = "direccion">
+    </div>
+    <div class="col-md-6">
+      <label for="inputCiudad" class="form-label">Ciudad</label>
+      <input type="text" class="form-control" id="inputCiudad" formControlName = "ciudad">
+    </div>
+    <div class="col-md-4">
+      <label for="inputBarrio" class="form-label">Barrio</label>
+      <select id="inputBarrio" class="form-select" formControlName = "barrio">
+        <option selected>Seleccionar...</option>
+        <option>Centro</option>
+        <option>Cordon</option>
+        <option>Parque Rodo</option>
+        <option>Pocitos</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Nro Puerta</label>
+      <input type="text" class="form-control" id="inputZip" formControlName = "nroPuerta">
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Confirmar</button>
+    </div>
+  </form>
+</div>

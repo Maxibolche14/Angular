@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { Persona } from '../models/persona';
 import { AlumnosComponent } from './alumnos.component';
 
 describe('AlumnosComponent', () => {
@@ -24,5 +24,5 @@ describe('AlumnosComponent', () => {
 
 export class Alumnos implements OnInit {
 
-  listaAlumnos : Array<string> = ['Maxi','Vane','Maria Paz'];
+  listaAlumnos : Array<Persona> = [];
 }
