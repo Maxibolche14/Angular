@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-alumnos',
@@ -13,14 +13,14 @@ export class FormAlumnosComponent implements OnInit {
     private fb: FormBuilder
   ) { 
     this.formularioUsuario =fb.group({
-      nombre: new FormControl('',[]),
-      apellidos: new FormControl('',[]),
-      edad: new FormControl(0,[]),
-      telefone: new FormControl('',[]),
-      direccion:new FormControl('',[]),
-      ciudad: new FormControl('',[]),
-      barrio: new FormControl('',[]),
-      nroPuerta:new FormControl(0,[])
+      nombre: new FormControl('',[Validators.required, Validators.minLength(3)]),
+      apellidos: new FormControl('',[Validators.required, Validators.minLength(3)]),
+      edad: new FormControl(0,[Validators.required]),
+      telefone: new FormControl('',[Validators.required]),
+      direccion:new FormControl('',[Validators.required]),
+      ciudad: new FormControl('',[Validators.required]),
+      barrio: new FormControl('',[Validators.required]),
+      nroPuerta:new FormControl(0,[Validators.required])
     })
   }
 

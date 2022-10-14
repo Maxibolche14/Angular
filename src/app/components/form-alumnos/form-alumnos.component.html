@@ -6,18 +6,22 @@
     <div class="col-md-6">
       <label for="inputNombre" class="form-label">Nombre</label>
       <input type="text" class="form-control" id="inputNombre" formControlName = "nombre">
+      <p *ngIf="!formularioUsuario.get('nombre')?.errors?.['required']">Debe ingresar un Nombre</p>
     </div>
     <div class="col-md-6">
       <label for="inputApellido" class="form-label">Apellido</label>
       <input type="text" class="form-control" id="inputApellido" formControlName = "apellidos">
+      <p *ngIf="!formularioUsuario.get('apellidos')?.errors?.['required']">Debe ingresar un Apellido</p>
     </div>
     <div class="col-md-6">
         <label for="inputEdad" class="form-label">Edad</label>
         <input type="text" class="form-control" id="inputEdad" formControlName = "edad">
+        <p *ngIf="!formularioUsuario.get('edad')?.errors?.['required']">Debe ingresar una Edad</p>
       </div>
       <div class="col-md-6">
         <label for="inputTelefono" class="form-label">Telefono</label>
         <input type="text" class="form-control" id="inputTelefono" formControlName = "telefone">
+        <p *ngIf="!formularioUsuario.get('telefone')?.errors?.['required']">Debe ingresar un Telefono</p>
       </div>
     <div class="col-12">
       <label for="inputDireccion" class="form-label">Direccion</label>
@@ -40,14 +44,6 @@
     <div class="col-md-2">
       <label for="inputZip" class="form-label">Nro Puerta</label>
       <input type="text" class="form-control" id="inputZip" formControlName = "nroPuerta">
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Check me out
-        </label>
-      </div>
     </div>
     <div class="col-12">
       <button type="submit" class="btn btn-primary">Confirmar</button>
