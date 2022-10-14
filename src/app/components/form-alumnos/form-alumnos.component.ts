@@ -15,12 +15,12 @@ export class FormAlumnosComponent implements OnInit {
     this.formularioUsuario =fb.group({
       nombre: new FormControl('',[Validators.required, Validators.minLength(3)]),
       apellidos: new FormControl('',[Validators.required, Validators.minLength(3)]),
-      edad: new FormControl(0,[Validators.required]),
+      edad: new FormControl('',[Validators.required]),
       telefone: new FormControl('',[Validators.required]),
-      direccion:new FormControl('',[Validators.required]),
-      ciudad: new FormControl('',[Validators.required]),
-      barrio: new FormControl('',[Validators.required]),
-      nroPuerta:new FormControl(0,[Validators.required])
+      direccion:new FormControl('',[]),
+      ciudad: new FormControl('',[]),
+      barrio: new FormControl('',[]),
+      nroPuerta:new FormControl(0,[])
     })
   }
 
