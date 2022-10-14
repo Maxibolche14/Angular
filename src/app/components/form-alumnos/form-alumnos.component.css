@@ -9,9 +9,28 @@
 
 h1{
     padding: 3%;
-    color: red;
+    color: rgb(149, 8, 8);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
 }
 
 p{
     color: red;
+}
+
+label{
+    color: rgb(16, 16, 136);
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button{
+    display: inline-block;
+    font-size: 15px;
+    color: white !important;
+    padding: 10px 35px;
+    border-radius: 20px;
+    background: #1e0488;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
 }
