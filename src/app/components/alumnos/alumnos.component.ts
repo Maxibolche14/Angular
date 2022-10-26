@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Persona } from '../models/persona';
+import { MatTableDataSource } from '@angular/material/table';
+import { ListaAlumnos } from '../models/ListaAlumnos';
 
 @Component({
   selector: 'app-alumnos',
@@ -8,7 +9,7 @@ import { Persona } from '../models/persona';
 })
 export class AlumnosComponent implements OnInit {
   
-  listaNombres: Array<Persona> = [
+  listaNombres: ListaAlumnos[] = [
     
     { nombre: 'Maxi', apellidos: 'Piñero', edad: 32, telefone: '091072566', direccion: 'Chana', ciudad: 'Montevideo', barrio: 'Cordon', nroPuerta: 2236 },
     { nombre: 'Vane', apellidos: 'Tavolara', edad: 25, telefone: '091072566', direccion: 'Chana', ciudad: 'Montevideo', barrio: 'Cordon', nroPuerta: 2236 },
@@ -19,6 +20,8 @@ export class AlumnosComponent implements OnInit {
     
   ];
   
+  columnas: string[] = ['nombre', 'apellidos', 'edad', 'telefone', 'direccion', 'ciudad', 'barrio', 'nroPuerta','Acciones'];
+  dataSource: MatTableDataSource<ListaAlumnos> = new MatTableDataSource<ListaAlumnos>(this.listaNombres);
 
   fecha: Date = new Date();
 
@@ -26,5 +29,10 @@ export class AlumnosComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  filtrar(event: Event){
+    const valorObtenido = (event.target as HTMLInputElement).value;
 
+    this.dataSource.filter = valorObtenido.trim();
+  }
 }

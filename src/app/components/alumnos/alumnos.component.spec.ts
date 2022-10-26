@@ -22,7 +22,7 @@ describe('AlumnosComponent', () => {
   });
 });
 
-export class Alumnos implements OnInit {
+/*export class Alumnos implements OnInit {
 
   listaAlumnos : Array<Persona> = [];
-}
+}*/

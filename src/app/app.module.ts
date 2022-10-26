@@ -9,6 +9,8 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { AlumnosComponent } from './components/alumnos/alumnos.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormAlumnosComponent } from './components/form-alumnos/form-alumnos.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FormAlumnosComponent } from './components/form-alumnos/form-alumnos.com
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

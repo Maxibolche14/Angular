@@ -1,0 +1,9 @@
+table {
+    width: 100%;
+  }
+
+  :host ::ng-deep th.mat-header-cell {
+    background: #2f18ed;
+    color: white;
+    text-align: left;
+}

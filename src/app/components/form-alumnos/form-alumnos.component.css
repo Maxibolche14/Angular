@@ -1,8 +1,5 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background-color: rgb(233, 233, 233);
+    background-color: white;
 }
 
 .Formulario{
@@ -33,6 +30,7 @@ label{
 }
 
 button{
+    margin-top: 2%;
     display: inline-block;
     font-size: 15px;
     color: white !important;
