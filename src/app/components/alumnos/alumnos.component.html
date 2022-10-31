@@ -2,12 +2,22 @@
 
 <p>Hoy es {{fecha | date: 'dd/MM/yy hh:mm'}}</p>
 
-<mat-form-field>
+<div class="d-flex justify-content-center- w-100">
+    <button mat-raised-button (click)="openDialog()">Open dialog without animation</button>
+</div>
+<mat-form-field appearance="legacy">
     <mat-label>Filtrar</mat-label>
     <input type="text" matInput (keyup)="filtrar($event)">
 </mat-form-field>
+<mat-icon >search</mat-icon>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Id -->
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Codigo</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+
     <!-- Nombre -->
     <ng-container matColumnDef="nombre">
         <th mat-header-cell *matHeaderCellDef>Nombre</th>
@@ -59,13 +69,13 @@
     <!-- Acciones -->
     <ng-container matColumnDef="Acciones">
         <th mat-header-cell *matHeaderCellDef>Acciones</th>
-        <td mat-cell *matCellDef>
+        <td mat-cell *matCellDef="let element">
             <button mat-icon-button>
-                <mat-icon>edit</mat-icon>
+                <mat-icon class="cursor-pointer">edit</mat-icon>
             </button>
 
             <button mat-icon-button>
-                <mat-icon>delete</mat-icon>
+                <mat-icon class="cursor-pointer" (click)="borrar(element.id)">delete</mat-icon>
             </button>
         </td>
     </ng-container>

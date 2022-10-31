@@ -1,4 +1,5 @@
 export interface ListaAlumnos {
+    id:number;
     nombre: string;
     apellidos: string;
     edad: number;
