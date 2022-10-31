@@ -11,3 +11,15 @@ table {
 .cursor-pointer{
     cursor: pointer;
 }
+
+.confirmar{
+    margin-top: 1%;
+    display: inline-block;
+    font-size: 10px;
+    color: white !important;
+    padding: 2px 19px;
+    border-radius: 15px;
+    background: #2a5082;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
+import { FormularioComponent } from '../formulario/formulario.component';
 import { ListaAlumnos } from '../models/ListaAlumnos';
 
 @Component({
@@ -52,10 +53,21 @@ export class AlumnosComponent implements OnInit {
   }
 
   openDialog(){
-    //this.dialog.open(DialogAnimationsExampleDialog, {
-     // width: '250px',
-     // enterAnimationDuration,
-     // exitAnimationDuration,
-   // });
+    let dialog = this.dialog.open(FormularioComponent, {
+     width: '70%',
+     height: '80%',
+    });
+
+    dialog.beforeClosed().subscribe(res => {
+      console.log(res);
+      this.listaNombres.push(
+        {
+          ...res,
+          id:this.listaNombres.length+1
+        }
+      )
+      console.log(this.listaNombres);
+      this.dataSource.data = this.dataSourceInicial
+    })
   }
 }
