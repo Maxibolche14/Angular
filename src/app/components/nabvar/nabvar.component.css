@@ -1,0 +1,9 @@
+.fixed-top {
+    position: fixed;
+    align-items: center;
+    top: 5px;
+    right: 0px;
+    left: 1280px;
+    z-index: 1030;
+    color: blue;
+}

@@ -1,15 +1,22 @@
-<h1>Lista de Alumnos</h1>
-
-<p>Hoy es {{fecha | date: 'dd/MM/yy hh:mm'}}</p>
+<div class="grid-container">
+    <div class="row clearfix" style="margin-right: 0px;">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <!-- <h1>Lista de Alumnos</h1> -->
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <p class="fechahora">Hoy es {{fecha | date: 'dd/MM/yy hh:mm'}}</p>
+        </div>
+    </div>
+</div>
 
 <div class="grid-container">
     <div class="row clearfix" style="margin-right: 0px;">
-        <div>
-            <div class="confirmar">
-                <button mat-raised-button (click)="openDialog()">AGREGAR ALUMNO</button>
+        <div class="col-xs-6 col-sm-6 col-md-8 col-lg-2">
+            <div  class="agregar" >
+                <mat-icon class="cursor-pointer"  mat-raised-button (click)="openDialog()" >add_circle</mat-icon>
             </div>
         </div>
-        <div class="col-xs-10 col-sm-10 col-md-8 col-lg-2,2">
+        <div class="col-xs-6 col-sm-6 col-md-8 col-lg-3">
             <mat-form-field appearance="legacy">
                 <mat-label>Filtrar</mat-label>
                 <input type="text" matInput (keyup)="filtrar($event)">
@@ -18,9 +25,6 @@
         </div>
     </div>
 </div>
-
-
-
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <!-- Id -->

@@ -23,3 +23,19 @@ table {
     text-transform: uppercase;
     transition: all 0.3s ease 0s;
 }
+
+.agregar {
+    margin-top: 5%;
+    padding: 2px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    width: 27px;
+    height: 27px;
+    color: blue;
+  }
+
+  .fechahora{
+    text-align: end;
+    margin-top: 2%;
+  }
